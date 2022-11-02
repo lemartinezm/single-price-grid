@@ -16,12 +16,17 @@ li {
 body {
   font-family: "Karla", sans-serif;
   background-color: $light_gray;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
   border-radius: 8px;
   overflow: hidden;
   margin: 32px;
+  box-shadow: 0 0 20px -8px $grayish_blue;
 
   section {
     &:nth-child(1) {
@@ -82,6 +87,7 @@ main {
         padding: 16px;
         margin-top: 32px;
         border-radius: 6px;
+        box-shadow: 0 0 30px -15px black;
       }
     }
 
@@ -101,6 +107,27 @@ main {
         margin-top: 16px;
         color: $light_gray;
         font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-areas: "a a" "b c";
+    max-width: 600px;
+    margin: 0 auto;
+
+    section {
+      &:nth-child(1) {
+        grid-area: a;
+      }
+      &:nth-child(2) {
+        grid-area: b;
+      }
+      &:nth-child(3) {
+        grid-area: c;
       }
     }
   }

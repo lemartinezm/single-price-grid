@@ -10,12 +10,24 @@ li {
 body {
   font-family: "Karla", sans-serif;
   background-color: hsl(204deg, 43%, 93%);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main {
   border-radius: 8px;
   overflow: hidden;
   margin: 32px;
+  -webkit-box-shadow: 0 0 20px -8px hsl(218deg, 22%, 67%);
+          box-shadow: 0 0 20px -8px hsl(218deg, 22%, 67%);
 }
 main section:nth-child(1) {
   display: -webkit-box;
@@ -82,6 +94,8 @@ main section:nth-child(2) button {
   padding: 16px;
   margin-top: 32px;
   border-radius: 6px;
+  -webkit-box-shadow: 0 0 30px -15px black;
+          box-shadow: 0 0 30px -15px black;
 }
 main section:nth-child(3) {
   color: white;
@@ -103,4 +117,22 @@ main section:nth-child(3) ul {
   margin-top: 16px;
   color: hsl(204deg, 43%, 93%);
   font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-areas: "a a" "b c";
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  main section:nth-child(1) {
+    grid-area: a;
+  }
+  main section:nth-child(2) {
+    grid-area: b;
+  }
+  main section:nth-child(3) {
+    grid-area: c;
+  }
 }/*# sourceMappingURL=styles.css.map */
